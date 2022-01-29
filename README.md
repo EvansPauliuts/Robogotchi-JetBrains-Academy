@@ -1,69 +1,200 @@
 # Robogotchi-JetBrains-Academy
 This project jetbrains academy https://hyperskill.org/projects/135
 
-## Work on project. Stage 2/4: Rock-Paper-Scissors
+## Work on project. Stage 3/4: A simple robot
 ### Objectives
 
 In this stage, your program should:
 
-1. Prompt the user to pick a game with a message ```Which game would you like to play?```.
-2. If they choose "Numbers", proceed with the game as in the previous stage. If they choose rock-paper-scissors, 
-implement steps 3-6. If the user input is anything else than "Numbers" or "Rock-paper-scissors", 
-print ```Please choose a valid option: Numbers or Rock-paper-scissors?```.
-3. Take the user input, check its validity, and ask for a valid input if needed.
-4. Output the robot's move: ```The robot chose [paper/rock/scissors]```.
-5. Output the result using an appropriate message: ```You won!```, ```The robot won!```, or ```It's a draw!```.
-6. Keep taking input as long as the user wants to play.
-7. Keep the game statistics and print it when the user decides to exit the game.
+1. Provide the following interactions: playing, recharging, sleeping;
+2. Print the information about the robot: its level of battery, boredom, overheating, and skill;
+3. Provide an option to quit the game;
+4. Take the user's input;
+5. If the input is correct, the chosen interaction should be performed. Otherwise, the program should inform the user and ask them for a valid input;
+6. React when certain parameters reach critical levels.
 
 #### Examples
 The greater-than symbol followed by a space (>) represents the user input.
 
 ##### example 1
 ```shell
+How will you call your robot?
+> Daniel
+
+Available interactions with Daniel:
+exit - Exit
+info - Check the vitals
+recharge - Recharge
+sleep - Sleep mode
+play - Play
+
+Choose:
+> info
+
+Daniel's stats are: the battery is 100,
+overheat is 0,
+skill level is 0,
+boredom is 0.
+
+Available interactions with Daniel:
+exit - Exit
+info - Check the vitals
+recharge - Recharge
+sleep - Sleep mode
+play - Play
+
+Choose:
+> fly to the moon
+
+Invalid input, try again!
+
+Available interactions with Daniel:
+exit - Exit
+info - Check the vitals
+recharge - Recharge
+sleep - Sleep mode
+play - Play
+
+Choose:
+> sleep
+
+Daniel is cool!
+
+Available interactions with Daniel:
+exit - Exit
+info - Check the vitals
+recharge - Recharge
+sleep - Sleep mode
+play - Play
+
+Choose:
+> play
+
 Which game would you like to play?
 > Rock-paper-scissors
 
 What is your move?
-> Paper
-The robot chose paper
-It's a draw!
-
-What is your move?
 > rock
+
 The robot chose scissors
 You won!
 
 What is your move?
-> gun
-No such option! Try again!
+> paper
+
+The robot chose scissors
+The robot won!
 
 What is your move?
-> scissors
+> rock
+
 The robot chose paper
-You won!
+The robot won!
 
 What is your move?
 > exit game
 
-You won: 2,
-The robot won: 0,
-Draws: 1
+You won: 1,
+The robot won: 2,
+Draws: 0.
+
+Daniel's level of boredom was 0. Now it is 0.
+Daniel's level of overheat was 0. Now it is 10.
+Daniel is in a great mood!
+
+Available interactions with Daniel:
+exit - Exit
+info - Check the vitals
+recharge - Recharge
+sleep - Sleep mode
+play - Play
+
+Choose:
+> recharge
+
+Daniel is charged!
+
+Available interactions with Daniel:
+exit - Exit
+info - Check the vitals
+recharge - Recharge
+sleep - Sleep mode
+play - Play
+
+Choose:
+> sleep
+
+Daniel's level of overheat was 10. Now it is 0.
+
+Daniel is cool!
+
+Available interactions with Daniel:
+exit - Exit
+info - Check the vitals
+recharge - Recharge
+sleep - Sleep mode
+play - Play
+
+Choose:
+> exit
+
+Game over
 ```
 
 ##### example 2
 ```shell
+Choose:
+> play
+
 Which game would you like to play?
-> Dominoes
+> numbers
 
-Please choose a valid option: Numbers or Rock-paper-scissors?
+What is your number?
+> 678
 
-> Numbers
+The robot entered the number 518807.
+The goal number is 873547
+The robot won!
+
+What is your number?
+> 6
+
+The robot entered the number 91265.
+The goal number is 374818
+The robot won!
 
 What is your number?
 > exit game
 
 You won: 0,
-The robot won: 0,
+The robot won: 2,
 Draws: 0.
+
+Daniel's level of boredom was 0. Now it is 0.
+Daniel's level of overheat was 80. Now it is 90.
+Daniel is in a great mood!
+
+Available interactions with Daniel:
+exit - Exit
+info - Check the vitals
+recharge - Recharge
+sleep - Sleep mode
+play - Play
+
+Choose:
+> play
+
+Which game would you like to play?
+> Rock-paper-scissors
+
+What is your move?
+> paper
+
+The robot chose rock
+You won!
+
+What is your move?
+> exit game
+
+The level of overheat reached 100, Daniel has blown up! Game over. Try again?
 ```
